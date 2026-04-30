@@ -549,6 +549,7 @@ body:not(.user-is-tabbing) a:focus {
     .about__content {
         flex-direction: column-reverse;
         align-items: initial;
+        
     }
 }
 
@@ -557,12 +558,21 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 @media(min-width: 901px) {
+
+    .about__content {
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        gap: 4rem;
+    }
+
     .about__text {
-        flex: 0 0 35%;
+        flex: 0 1 450px;
+        text-align: left;
     }
     
     .about__photo-container {
-        flex: 1;
+        flex: 0 0 auto;
         margin: 0 var(--gutter-huge) 0 0;
     }
 }
