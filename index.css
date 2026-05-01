@@ -509,6 +509,170 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+
+.work__boxes {
+    display: grid;
+    /* Create 3 equal columns, with a minimum width to prevent overcrowding */
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    /* The space between the project cards */
+    gap: 4rem;
+    margin-top: var(--gutter-normal);
+}
+
+/* --- Project Card Styling --- */
+.work__box {
+    background-color: #1a1a1a; /* Very dark gray, slightly lighter than black */
+    border-radius: 15px; /* Rounded corners for the card */
+    overflow: hidden; /* Important to keep the top video/image within rounded corners */
+    display: flex;
+    flex-direction: column; /* Content flows top-to-bottom */
+    
+    /* RESET previous work__box styles */
+    align-items: flex-start !important;
+    margin-bottom: 0 !important;
+    border-bottom: none !important;
+    padding-bottom: 2rem; /* Give some space at the bottom of the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Subtle lift effect on hover */
+.work__box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* --- Media (Video/Image) Container --- */
+.work__image-box {
+    width: 100%;
+    /* Keep previous min-width setup, but now fill the container */
+    margin: 0 !important;
+    height: 200px; /* Force a consistent height for all images/videos */
+    overflow: hidden; /* Crop images that are too tall */
+}
+
+/* Apply image/video styles specifically within the grid box */
+.work__box video,
+.work__box img.work__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the 200px area without distortion (crops edges) */
+    display: block; /* Eliminate small gaps below media */
+}
+
+/* --- Text Container Setup --- */
+.work__text {
+    flex: 1 1 auto; /* Allow text block to grow/shrink, but always fill the space */
+    padding: 2rem 2.5rem 0; /* Add padding inside the card for the text */
+    
+    /* RESET previous flex-shrink */
+    flex: 0 0 auto !important; 
+}
+
+/* Text Element Spacing */
+.work__text h3 {
+    margin-top: 0;
+    font-size: 2.2rem; /* Slightly smaller heading for the smaller cards */
+}
+
+.work__text p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    margin: 1rem 0 2rem;
+    color: var(--white-1);
+    
+    /* A quick way to ensure descriptions don't get too long and misalign the buttons */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit description to 3 lines */
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+}
+
+/* --- Links (Itch/GitHub) Container --- */
+.work__links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: auto; /* Pushes links to the bottom of the card if text is short */
+    gap: 1.5rem; /* Space between the Itch link and GitHub icon */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Subtle divider */
+    padding-top: 1.5rem;
+}
+
+/* Specific styling for the link__text within cards */
+.work__text .link__text {
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid transparent; /* Remove previous underline style */
+}
+
+.work__text .link__text::after {
+    display: none; /* Disable the old hover fill effect in cards */
+}
+
+.work__text .link__text:hover {
+    color: var(--yellow);
+    border-bottom: 1px solid var(--yellow);
+}
+
+/* GitHub Icon Specifics in cards */
+.work__code {
+    margin-left: 0 !important; /* RESET previous margin */
+    height: 2.5rem !important; /* Scale it down */
+}
+
+/* --------------------------------------- */
+/* ---- Special Section: Software Logos --- */
+/* --------------------------------------- */
+
+/* The new container you will add in HTML */
+.work__software-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem; /* Space between software icons */
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+/* Scaling and styling the software logos */
+.work__software-logo {
+    height: 3rem; /* Set a consistent height */
+    max-width: 6rem; /* Prevent wide logos from taking too much space */
+    object-fit: contain; /* Ensure logos scale correctly */
+    filter: grayscale(100%) opacity(0.7); /* Subtle design: gray and faded */
+    transition: filter 0.3s ease;
+}
+
+/* Light up the logo on hover */
+.work__software-logo:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+/* --------------------------------------- */
+/* ------- Work Responsiveness ----------- */
+/* --------------------------------------- */
+
+@media(max-width: 1000px) {
+    .work__boxes {
+        /* Drop to 2 columns on medium screens */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 650px) {
+    .work__boxes {
+        /* Single column on small mobile screens */
+        grid-template-columns: 1fr;
+    }
+    
+    .work__box {
+        max-width: 500px; /* Optional: limit width on mobile for better reading */
+        margin: 0 auto;
+    }
+}
+
+
 /* --------------------------------------- */
 /* ----- Clients ----- */
 /* --------------------------------------- */
