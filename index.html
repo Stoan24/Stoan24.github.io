@@ -11,8 +11,8 @@
     Stan Olivier
   </title>
 
-  <meta name="description" content="Add small description of yourslef.">
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
+  <meta name="description" content="Stan Olivier - Student Game Developer at DAE. Specializing in gameplay systems and tool creation using Unity, Unreal Engine, and C++.">
+  <meta name="keywords" content="Stan Olivier, Game Developer, DAE, Unity, Unreal Engine, Gameplay Programmer, Portfolio" />
   <link rel="stylesheet" href="index.css" />
 </head>
 
@@ -21,6 +21,13 @@
   <!-- ***** Header ***** -->
 
   <header class="header" role="banner" id="top">
+	<div class="header__video-bg">
+      <video class="header-track active" autoplay muted loop playsinline src="./images/BeepAndBumperTrailer.mp4"></video>
+      <video class="header-track" autoplay muted loop playsinline src="./images/PFC.mp4"></video>
+      <video class="header-track" autoplay muted loop playsinline src="./images/TheOffspring.mp4"></video>
+	  <video class="header-track" autoplay muted loop playsinline src="./images/GenerationTD.mp4"></video>
+    </div>
+	
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
@@ -53,220 +60,18 @@
 
     <section class="work" id="work">
       <div class="row">
-        <h2>My Work</h2>
-
-        <div class="work__boxes">
-          <div class="work__box" 
-     style="cursor: pointer;"
-     data-title="Proxy Fight Club" 
-     data-description="A humorous office-themed brawler built in Unity for a school assignment, completely designed around two randomly generated prompt words: 'Shareholder' and 'Versus'. Players fight their way up the corporate ladder by literally brawling with colleagues in an office setting. As my very first production-level project in Unity, the core challenge was rapidly overcoming the engine's learning curve. Driven to explore the depth of the ecosystem, I pushed myself to experiment with a wide variety of features, building everything from custom component workflows to hand-crafted arm animations and specialized input logic from scratch."
-     data-media-type="video"
-     data-media-src="./images/PFC.mp4"
-     data-link-url="https://github.com/Stoan24/Proxy-Fight-Club"
-     data-link-text="View Repository">
-
-            <div class="work__image-box">
-              <video alt="Proxy Fight Club" width="750" height="500" autoplay muted loop playsinline>
-              <source src="./images/PFC.mp4" type="video/mp4">
-              Browser does not support video
-              </video>
-            </div>
-
-
-            <div class="work__text">
-              <h3>Proxy Fight Club</h3>
-              <p>
-                Fight your colleagues in the office to move yourself up the chain of command. Made in Unity.
-              </p>
-
-              <div class="work__software-logos">
-                <img src="./images/CSharp.png" class="work__software-logo" alt="C#" title="Programmed in C#"/>
-                <img src="./images/Unity.svg" class="work__software-logo" alt="Unity" title="Made with Unity"/>
-              </div>
-          
-              <div class="work__links">
-                <a href="https://github.com/Stoan24/Proxy-Fight-Club">
-                  <img src="./images/github.svg" class="work__code" title="View Repository" alt="GitHub">
-                </a>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="work__box" 
-     style="cursor: pointer;"
-     data-title="The Offspring" 
-     data-description="A tense, first-person horror-survival game built in Unreal Engine 5. Based on the prompt words 'Offspring' and 'Carrot & Stick', the player must escape a facility whilst caring for a baby alien that has accidentally imprinted on them. If the child is neglected, its cries alert its monstrous, hunting mother. This was my introduction to Unreal Engine, built primarily using Blueprint visual scripting. The major hurdle was mastering lighting, environmental design, and audio cues to establish a genuinely terrifying atmosphere while engineering a balanced high-tension gameplay loop."
-     data-media-type="video"
-     data-media-src="./images/TheOffspring.mp4">
-
-            <div class="work__image-box">
-              <video alt="The Offspring" width="750" height="500" autoplay muted loop playsinline>
-              <source src="./images/TheOffspring.mp4" type="video/mp4">
-              Browser does not support video
-              </video>
-            </div>
-
-
-            <div class="work__text">
-              <h3>The Offspring</h3>
-              <p>
-                Escape from an alien mother whose child accidentally imprinted on you. Activate all terminals and run for the exit. Made in Unreal.
-              </p>
-          
-              <div class="work__software-logos">
-                <img src="./images/CPlusPlus.png" class="work__software-logo" alt="C++" title="Programmed in C++"/>
-                <img src="./images/Unreal.svg" class="work__software-logo" alt="Unreal" title="Made with Unreal"/>
-              </div>
-
-              <div class="work__links">
-                <!--
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Repository" alt="GitHub">
-                </a>
-                -->
-              </div>
-            </div>
-            
-          </div>
-
-          <div class="work__box" 
-     style="cursor: pointer;"
-     data-title="Geometric Algebra Maze" 
-     data-description="A specialized puzzle-maze game developed within the Flytracer framework, built entirely around the practical application of advanced mathematical frameworks. I deliberately chose this advanced course to challenge my mathematical limits. The goal was to manipulate a game world using complex Geometric Algebra formulas rather than a standard physics engine. I successfully engineered a reflection mechanic where standing near mirrored spheres calculates algebraic reflection vectors, letting the player mathematically project and traverse across the maze's boundaries."
-     data-media-type="video"
-     data-media-src="./images/MazeGame.png">
-
-            <div class="work__image-box">
-              <img src="./images/MazeGame.png" class="work__image" alt="GEOA Maze Game" />
-            </div>
-
-
-            <div class="work__text">
-              <h3>Geometric Algebra Maze</h3>
-              <p>
-			          Try to find your way around the reflection maze. Made in Flytracer using different geometric algebra formulas.
-              </p>
-          
-              <div class="work__software-logos">
-                <img src="./images/CPlusPlus.png" class="work__software-logo" alt="C++" title="Programmed in C++"/>
-              </div>
-
-
-              <div class="work__links">
-                <a href="https://github.com/fdlombae/FlyTracer" class="link__text">
-                  Visit Flytracer <span>&rarr;</span>
-                </a>
-                
-                <!--
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Repository" alt="GitHub">
-                </a>
-			    -->
-				
-              </div>
-            </div>
-            
-          </div>
-
-
-          <div class="work__box" 
-     style="cursor: pointer;"
-     data-title="Tower Defense" 
-     data-description="A classic tactical tower defense game featuring dynamic level geometry, serving as the foundational project that sparked my journey into game development. Being my absolute first game, everything was uncharted territory. I chose to challenge myself by moving away from hardcoded paths and instead implemented a custom algorithmic path-generation system. Figuring out how to map nodes and get enemies to intelligently adapt their pathfinding around placed obstacles was an invaluable lesson in data structures and spatial logic."
-     data-media-type="video"
-     data-media-src="./images/GenerationTD.mp4"
-	 data-link-url="https://github.com/Stoan24/TowerDefence"
-     data-link-text="View Repository">
-
-            <div class="work__image-box">
-              <video alt="Tower Defense" width="750" height="500" autoplay muted loop playsinline>
-              <source src="./images/GenerationTD.mp4" type="video/mp4">
-              Browser does not support video
-              </video>
-            </div>
-
-            <div class="work__text">
-              <h3>Tower Defense</h3>
-              <p>
-                A small tower defense game that has path generation.
-              </p>
-
-              <div class="work__software-logos">
-                <img src="./images/CPlusPlus.png" class="work__software-logo" alt="C++" title="Programmed in C++"/>
-              </div>
-          
-              <div class="work__links">
-                <!--
-                <a href="https://github.com/Stoan24/TowerDefence" class="link__text">
-                  Visit Repository <span>&rarr;</span>
-                </a>
-                -->
-                
-                <a href="https://github.com/Stoan24/TowerDefence">
-                  <img src="./images/github.svg" class="work__code" title="View Repository" alt="GitHub">
-                </a>
-              </div>
-            </div>
-            
-          </div>
-		  
-        </div>
-		
+        <h2>Solo Projects</h2>
+        <div class="work__boxes" id="solo-projects-container"></div>
       </div>
+    </section>
 
-
-    </div>
- 
-
-<!-- ***** Group Projects ***** -->
+	<!-- ***** Group Projects ***** -->
 
     <section class="work" id="group-work">
       <div class="row">
         <h2>Group Projects</h2>
-
-        <div class="work__boxes">
-		
-          <div class="work__box" 
-     style="cursor: pointer;"
-     data-title="Beep & Bumper" 
-     data-description="An award-winning multiplayer party game developed during the 2026 Xbox GameCamp Belgium. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooter—handling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity."
-     data-media-type="video"
-     data-media-src="./images/BeepAndBumperTrailer.mp4"
-     data-link-url="https://bramd98.itch.io/beep-bumper"
-     data-link-text="Visit Itch.io Page">
-            <div class="work__image-box">
-              <video alt="Beep & Bumper" width="750" height="500" autoplay muted loop playsinline>
-                <source src="./images/BeepAndBumperTrailer.mp4" type="video/mp4">
-                Browser does not support video
-              </video>
-            </div>
-
-            <div class="work__text">
-              <h3>Beep & Bumper</h3>
-              <p>
-                Game made in the 2026 Xbox GameCamp Belgium. We ended up 1st for the category 'Friendslop', 3rd for the categories 'Minesweeper' and 'Community'[cite: 6]. Made in Unity[cite: 6].
-              </p>
-
-              <div class="work__software-logos">
-                <img src="./images/CSharp.png" class="work__software-logo" alt="C#" title="Programmed in C#" />
-                <img src="./images/Unity.svg" class="work__software-logo" alt="Unity" title="Made with Unity" />
-              </div>
-
-              <div class="work__links">
-                <a href="https://bramd98.itch.io/beep-bumper" target="_blank" class="link__text">
-                  Visit Itch.io Page <span>&rarr;</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <div class="work__boxes" id="group-projects-container"></div>
       </div>
-		  
     </section>
 
 
@@ -297,7 +102,7 @@
           <div class="about__text">
             <p>
               Hi I'm Stan. I'm a second year Game Development student at DAE with a versatile toolkit.
-              Experienced in collaborating on projects, I like breaking my brain over complex problems and learning new engine workflows.
+              Experienced in collaborating on projects, I like solving complex problems and learning new engine workflows.
             </p>
             <!--
             <a href="#" class="btn">My Resume</a>

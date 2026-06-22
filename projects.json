@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Proxy Fight Club",
+    "type": "solo",
+    "description": "A humorous office-themed brawler built in Unity for a school assignment, completely designed around two randomly generated prompt words: 'Shareholder' and 'Versus'. Players fight their way up the corporate ladder by literally brawling with colleagues in an office setting. As my very first production-level project in Unity, the core challenge was rapidly overcoming the engine's learning curve. Driven to explore the depth of the ecosystem, I pushed myself to experiment with a wide variety of features, building everything from custom component workflows to hand-crafted arm animations and specialized input logic from scratch.",
+    "mediaType": "video",
+    "mediaSrc": "./images/PFC.mp4",
+    "logos": [
+      {"src": "./images/CSharp.png", "alt": "C#", "title": "Programmed in C#"},
+      {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
+    ],
+    "links": [
+      {"url": "https://github.com/Stoan24/Proxy-Fight-Club", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true}
+    ]
+  },
+  {
+    "title": "The Offspring",
+    "type": "solo",
+    "description": "A tense, first-person horror-survival game built in Unreal Engine 5. Based on the prompt words 'Offspring' and 'Carrot & Stick', the player must escape a facility while carrying a baby alien that has accidentally imprinted on them. If the child is neglected, its cries alert its monstrous, hunting mother. This was my introduction to Unreal Engine, built primarily using Blueprint visual scripting. The major hurdle was mastering lighting, environmental design, and audio cues to establish a genuinely terrifying atmosphere while engineering a balanced high-tension gameplay loop.",
+    "mediaType": "video",
+    "mediaSrc": "./images/TheOffspring.mp4",
+    "logos": [
+      {"src": "./images/CPlusPlus.png", "alt": "C++", "title": "Programmed in C++"},
+      {"src": "./images/Unreal.svg", "alt": "Unreal", "title": "Made with Unreal"}
+    ],
+    "links": []
+  },
+  {
+    "title": "Tower Defense",
+    "type": "solo",
+    "description": "A classic tactical tower defense game featuring dynamic level geometry, serving as the foundational project that sparked my journey into game development. Being my absolute first game, everything was uncharted territory. I chose to challenge myself by moving away from hardcoded paths and instead implemented a custom algorithmic path-generation system. Figuring out how to map nodes and get enemies to intelligently adapt their pathfinding around placed obstacles was an invaluable lesson in data structures and spatial logic.",
+    "mediaType": "video",
+    "mediaSrc": "./images/GenerationTD.mp4",
+    "logos": [
+      {"src": "./images/CPlusPlus.png", "alt": "C++", "title": "Programmed in C++"}
+    ],
+    "links": [
+      {"url": "https://github.com/Stoan24/TowerDefence", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true}
+    ]
+  },
+  {
+    "title": "Geometric Algebra Maze",
+    "type": "solo",
+    "description": "A specialized puzzle-maze game developed within the Flytracer framework, built entirely around the practical application of advanced mathematical frameworks. I deliberately chose this advanced course to challenge my mathematical limits. The goal was to manipulate a game world using complex Geometric Algebra formulas rather than a standard physics engine. I successfully engineered a reflection mechanic where standing near mirrored spheres calculates algebraic reflection vectors, letting the player mathematically project and traverse across the maze's boundaries.",
+    "mediaType": "image",
+    "mediaSrc": "./images/MazeGame.png",
+    "logos": [
+      {"src": "./images/CPlusPlus.png", "alt": "C++", "title": "Programmed in C++"}
+    ],
+    "links": [
+      {"url": "https://github.com/fdlombae/FlyTracer", "text": "Visit Flytracer", "isIcon": false}
+    ]
+  },
+  {
+    "title": "Beep & Bumper",
+    "type": "group",
+    "description": "A fast-paced, award-winning multiplayer party game developed during the 2026 Xbox GameCamp Belgium, taking 1st place in the 'Friendslop' category. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooter—handling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity.",
+    "mediaType": "video",
+    "mediaSrc": "./images/BeepAndBumperTrailer.mp4",
+    "logos": [
+      {"src": "./images/CSharp.png", "alt": "C#", "title": "Programmed in C#"},
+      {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
+    ],
+    "links": [
+      {"url": "https://bramd98.itch.io/beep-bumper", "text": "Visit Itch.io Page", "isIcon": false}
+    ]
+  },
+  {
+    "title": "JustRollWithIt",
+    "type": "group",
+    "description": "Just Roll With It is a high-octane 3D racing game where players take control of competitive pillbugs tearing down winding tracks. Serving as both the primary gameplay programmer and level designer, I engineered the high-speed mechanical feel from scratch—developing the custom rolling physics, torque forces, and active combat abilities. I then leveraged these systems to design and construct the tracks, meticulously tuning player flow, checkpoint placement, hazard layout, and shortcuts to reward mastery of the game's high-speed movement mechanics.",
+    "mediaType": "video",
+    "mediaSrc": "./images/JustRollWithIt.mp4",
+    "logos": [
+      {"src": "./images/CSharp.png", "alt": "C#", "title": "Programmed in C#"},
+      {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
+    ],
+    "links": [
+      {"url": "https://jelena-r.itch.io/justrollwithit", "text": "Visit Itch.io Page", "isIcon": false}
+    ]
+  }
+]
