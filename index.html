@@ -24,23 +24,25 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contact</a>
-          </li>
+          <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+		  <li class="nav__item"><a href="#group-work" class="nav__link">Group Projects</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
+	
+    <div class="header__content row">
+      <div class="header__text-box">
         <h1 class="heading-primary">
           <span>Stan Olivier</span>
         </h1>
         <p>Student Game Development at DAE</p>
         <a href="#contact" class="btn btn--pink">Get in touch</a>
+      </div>
+	  
+	  <div class="header__photo-box">
+        <img class="header__photo" src="./images/StanOlivier_Headshot.png" alt="Stan Olivier" />
       </div>
     </div>
   </header>
@@ -54,42 +56,14 @@
         <h2>My Work</h2>
 
         <div class="work__boxes">
-
-          <div class="work__box">
-
-            <div class="work__image-box">
-              <video alt="Beep & Bumper" width="750" height="500" autoplay muted loop playsinline>
-              <source src="./images/BeepAndBumperTrailer.mp4" type="video/mp4">
-              Browser does not support video
-              </video>
-            </div>
-
-            <div class="work__text">
-              <h3>Beep & Bumper</h3>
-              <p>
-                Game made in the 2026 Xbox GameCamp Belgium. We ended up 1st for the category 'Friendslop', 3rd for the categories 'Minesweeper' and 'Community'. Made in Unity.
-              </p>
-
-              <div class="work__software-logos">
-                <img src="./images/CSharp.png" class="work__software-logo" alt="C#" title="Programmed in C#"/>
-                <img src="./images/Unity.svg" class="work__software-logo" alt="Unity" title="Made with Unity"/>
-              </div>
-
-              <div class="work__links">
-                <a href="https://bramd98.itch.io/beep-bumper" target="_blank" class="link__text">
-                  Visit Itch.io Page <span>&rarr;</span>
-                </a>
-                <!-- 
-                <a href="https://github.com/Stoan24/Beep&Bumper" title="View Repository" target="_blank">
-                  <img src="./images/github.svg" class="work__code" alt="GitHub">
-                </a>
-                -->
-              </div>
-            </div>
-			    </div>
-
-
-          <div class="work__box">
+          <div class="work__box" 
+     style="cursor: pointer;"
+     data-title="Proxy Fight Club" 
+     data-description="A humorous office-themed brawler built in Unity for a school assignment, completely designed around two randomly generated prompt words: 'Shareholder' and 'Versus'. Players fight their way up the corporate ladder by literally brawling with colleagues in an office setting. As my very first production-level project in Unity, the core challenge was rapidly overcoming the engine's learning curve. Driven to explore the depth of the ecosystem, I pushed myself to experiment with a wide variety of features, building everything from custom component workflows to hand-crafted arm animations and specialized input logic from scratch."
+     data-media-type="video"
+     data-media-src="./images/PFC.mp4"
+     data-link-url="https://github.com/Stoan24/Proxy-Fight-Club"
+     data-link-text="View Repository">
 
             <div class="work__image-box">
               <video alt="Proxy Fight Club" width="750" height="500" autoplay muted loop playsinline>
@@ -119,7 +93,12 @@
           </div>
 
 
-          <div class="work__box">
+          <div class="work__box" 
+     style="cursor: pointer;"
+     data-title="The Offspring" 
+     data-description="A tense, first-person horror-survival game built in Unreal Engine 5. Based on the prompt words 'Offspring' and 'Carrot & Stick', the player must escape a facility whilst caring for a baby alien that has accidentally imprinted on them. If the child is neglected, its cries alert its monstrous, hunting mother. This was my introduction to Unreal Engine, built primarily using Blueprint visual scripting. The major hurdle was mastering lighting, environmental design, and audio cues to establish a genuinely terrifying atmosphere while engineering a balanced high-tension gameplay loop."
+     data-media-type="video"
+     data-media-src="./images/TheOffspring.mp4">
 
             <div class="work__image-box">
               <video alt="The Offspring" width="750" height="500" autoplay muted loop playsinline>
@@ -154,40 +133,12 @@
             
           </div>
 
-
-          <div class="work__box">
-
-            <div class="work__image-box">
-              <img src="./images/HoudiniPrison.png" class="work__image" alt="Houdini Prison Tool" />
-            </div>
-
-            <div class="work__text">
-              <h3>Houdini Prison Tool</h3>
-              <p>
-                Tool that can generate different types of desert prison digital assets. Made in Houdini.
-              </p>
-
-              <div class="work__software-logos">
-                <img src="./images/Houdini.png" class="work__software-logo" alt="Houdini" title="Made with Houdini"/>
-              </div>
-
-
-              <div class="work__links">
-                <!--
-                <a href="#" class="link__text">
-                  Visit Site <span>&rarr;</span>
-                </a>
-                <a href="#">
-                  <img src="./images/github.svg" class="work__code" title="View Repository" alt="GitHub">
-                </a>
-                -->
-              </div>
-            </div>
-            
-          </div>
-
-
-          <div class="work__box">
+          <div class="work__box" 
+     style="cursor: pointer;"
+     data-title="Geometric Algebra Maze" 
+     data-description="A specialized puzzle-maze game developed within the Flytracer framework, built entirely around the practical application of advanced mathematical frameworks. I deliberately chose this advanced course to challenge my mathematical limits. The goal was to manipulate a game world using complex Geometric Algebra formulas rather than a standard physics engine. I successfully engineered a reflection mechanic where standing near mirrored spheres calculates algebraic reflection vectors, letting the player mathematically project and traverse across the maze's boundaries."
+     data-media-type="video"
+     data-media-src="./images/MazeGame.png">
 
             <div class="work__image-box">
               <img src="./images/MazeGame.png" class="work__image" alt="GEOA Maze Game" />
@@ -214,14 +165,22 @@
                 <a href="#">
                   <img src="./images/github.svg" class="work__code" title="View Repository" alt="GitHub">
                 </a>
-			          -->
+			    -->
+				
               </div>
             </div>
             
           </div>
 
 
-          <div class="work__box">
+          <div class="work__box" 
+     style="cursor: pointer;"
+     data-title="Tower Defense" 
+     data-description="A classic tactical tower defense game featuring dynamic level geometry, serving as the foundational project that sparked my journey into game development. Being my absolute first game, everything was uncharted territory. I chose to challenge myself by moving away from hardcoded paths and instead implemented a custom algorithmic path-generation system. Figuring out how to map nodes and get enemies to intelligently adapt their pathfinding around placed obstacles was an invaluable lesson in data structures and spatial logic."
+     data-media-type="video"
+     data-media-src="./images/GenerationTD.mp4"
+	 data-link-url="https://github.com/Stoan24/TowerDefence"
+     data-link-text="View Repository">
 
             <div class="work__image-box">
               <video alt="Tower Defense" width="750" height="500" autoplay muted loop playsinline>
@@ -256,20 +215,57 @@
           </div>
 		  
         </div>
+		
       </div>
 
 
-        </div>
+    </div>
  
 
-          
-		  
-		  
-		  
-		  
-		  
-		  
-		  
+<!-- ***** Group Projects ***** -->
+
+    <section class="work" id="group-work">
+      <div class="row">
+        <h2>Group Projects</h2>
+
+        <div class="work__boxes">
+		
+          <div class="work__box" 
+     style="cursor: pointer;"
+     data-title="Beep & Bumper" 
+     data-description="An award-winning multiplayer party game developed during the 2026 Xbox GameCamp Belgium. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooter—handling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity."
+     data-media-type="video"
+     data-media-src="./images/BeepAndBumperTrailer.mp4"
+     data-link-url="https://bramd98.itch.io/beep-bumper"
+     data-link-text="Visit Itch.io Page">
+            <div class="work__image-box">
+              <video alt="Beep & Bumper" width="750" height="500" autoplay muted loop playsinline>
+                <source src="./images/BeepAndBumperTrailer.mp4" type="video/mp4">
+                Browser does not support video
+              </video>
+            </div>
+
+            <div class="work__text">
+              <h3>Beep & Bumper</h3>
+              <p>
+                Game made in the 2026 Xbox GameCamp Belgium. We ended up 1st for the category 'Friendslop', 3rd for the categories 'Minesweeper' and 'Community'[cite: 6]. Made in Unity[cite: 6].
+              </p>
+
+              <div class="work__software-logos">
+                <img src="./images/CSharp.png" class="work__software-logo" alt="C#" title="Programmed in C#" />
+                <img src="./images/Unity.svg" class="work__software-logo" alt="Unity" title="Made with Unity" />
+              </div>
+
+              <div class="work__links">
+                <a href="https://bramd98.itch.io/beep-bumper" target="_blank" class="link__text">
+                  Visit Itch.io Page <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
 		  
     </section>
 
@@ -278,7 +274,6 @@
 	  <div class="row">
 		<h2>Skills</h2>
 		<div class="client__logos">
-		  <!-- Add logos of the clients or companies you'have worked with. -->
 		  <img src="./images/CPlusPlus.png" class="client__logo" alt="C++" />
 		  <img src="./images/CSharp.png" class="client__logo" alt="C#" />
 		  <img src="./images/Python.png" class="client__logo" alt="Python" />
@@ -323,7 +318,7 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <!-- Replace the email with yours -->
+        <!-- Replace the email -->
         <a href="mailto:stan.olivier@student.howest.be" class="btn">stan.olivier@student.howest.be</a>
       </div>
     </div>
@@ -333,43 +328,20 @@
 
   <footer role="contentinfo" class="footer">
     <div class="row">
-      <!-- Update the links to point to your accounts -->
       <ul class="footer__social-links">
-        <!--
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        -->
+
         <li class="footer__social-link-item">
           <a href="https://github.com/Stoan24/" title="Link to Github Profile">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
           </a>
         </li>
-        <!--
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        -->
+
         <li class="footer__social-link-item">
           <a href=https://www.linkedin.com/in/stan-olivier-417354231/">
             <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
       </ul>
-
-      <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
-      </p>
-      <div class="footer__github-buttons">
-        <iframe
-          src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
-        </iframe>
-      </div>
     </div>
   </footer>
 
@@ -377,6 +349,15 @@
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
   <script src="./index.js"></script>
+  
+  
+  <div id="project-modal" class="modal">
+    <div class="modal__content">
+      <button class="modal__close" aria-label="Close modal">&times;</button>
+      <div class="modal__body">
+        </div>
+    </div>
+  </div>
 </body>
 
 </html>
