@@ -167,14 +167,29 @@ function initializeModalSystem() {
       if (!title || !description) return;
 
       let mediaHtml = "";
-      if (mediaType === "video" && mediaSrc) {
-        mediaHtml = `<video class="modal__media" autoplay muted loop playsinline controls><source src="${mediaSrc}" type="video/mp4"></video>`;
-      } else if (mediaType === "image" && mediaSrc) {
-        mediaHtml = `<img class="modal__media" src="${mediaSrc}" alt="${title}" />`;
+      if (mediaType === "video" && mediaSrc) 
+      {
+        mediaHtml = `<video 
+      alt="${project.title}" 
+      width="750" 
+      height="500" 
+      autoplay 
+      muted 
+      loop 
+      playsinline 
+      preload="auto"
+      style="background-color: #111; object-fit: cover; width: 100%; height: 100%;">
+        <source src="${project.mediaSrc}" type="video/mp4">
+        Browser does not support video
+    </video>`;
+      } else if (mediaType === "image" && mediaSrc) 
+      {
+        mediaHtml = `<img src="${project.mediaSrc}" class="work__image" alt="${project.title}" />`;
       }
 
       let linkHtml = "";
-      if (linkUrl) {
+      if (linkUrl) 
+      {
         linkHtml = `<a href="${linkUrl}" target="_blank" class="btn btn--pink">${linkText} &rarr;</a>`;
       }
 
@@ -184,6 +199,14 @@ function initializeModalSystem() {
         <p>${description}</p>
         ${linkHtml}
       `;
+
+      if (mediaType === "video" && mediaSrc) {
+        const modalVideo = modalBody.querySelector(".modal__media");
+        if (modalVideo) {
+          modalVideo.load();
+          modalVideo.play().catch(err => console.log("Autoplay buffered; awaiting interaction."));
+        }
+      }
 
       modal.classList.add("modal--open");
       document.body.style.overflow = "hidden";
