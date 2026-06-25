@@ -9,7 +9,6 @@ const handleFirstTab = (e) => {
     window.removeEventListener('keydown', handleFirstTab)
     window.addEventListener('mousedown', handleMouseDownOnce)
   }
-
 }
 
 const handleMouseDownOnce = () => {
@@ -89,11 +88,9 @@ document.addEventListener("DOMContentLoaded", () => {
           cardMediaHtml = `<img src="${project.mediaSrc}" class="work__image" alt="${project.title}" />`;
         }
 
-
         const logosHtml = project.logos.map(logo => 
           `<img src="${logo.src}" class="work__software-logo" alt="${logo.alt}" title="${logo.title}" />`
         ).join("");
-
 
         const linksHtml = project.links.map(link => {
           if (link.isIcon) {
@@ -102,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
             return `<a href="${link.url}" target="_blank" class="link__text">${link.text} <span>&rarr;</span></a>`;
           }
       }).join("");
-
 
         const projectBox = document.createElement("div");
         projectBox.className = "work__box";
@@ -117,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
           projectBox.setAttribute("data-link-url", project.links[0].url);
           projectBox.setAttribute("data-link-text", project.links[0].text || "View Project");
         }
-
 
         const partialDescription = project.description.length > 140 
           ? project.description.slice(0, 137) + "..." 
@@ -139,7 +134,6 @@ document.addEventListener("DOMContentLoaded", () => {
           soloContainer.appendChild(projectBox);
         }
       });
-
 
       initializeModalSystem();
     })
@@ -167,29 +161,14 @@ function initializeModalSystem() {
       if (!title || !description) return;
 
       let mediaHtml = "";
-      if (mediaType === "video" && mediaSrc) 
-      {
-        mediaHtml = `<video 
-      alt="${project.title}" 
-      width="750" 
-      height="500" 
-      autoplay 
-      muted 
-      loop 
-      playsinline 
-      preload="auto"
-      style="background-color: #111; object-fit: cover; width: 100%; height: 100%;">
-        <source src="${project.mediaSrc}" type="video/mp4">
-        Browser does not support video
-    </video>`;
-      } else if (mediaType === "image" && mediaSrc) 
-      {
-        mediaHtml = `<img src="${project.mediaSrc}" class="work__image" alt="${project.title}" />`;
+      if (mediaType === "video" && mediaSrc) {
+        mediaHtml = `<video class="modal__media" autoplay muted loop playsinline controls><source src="${mediaSrc}" type="video/mp4"></video>`;
+      } else if (mediaType === "image" && mediaSrc) {
+        mediaHtml = `<img class="modal__media" src="${mediaSrc}" alt="${title}" />`;
       }
 
       let linkHtml = "";
-      if (linkUrl) 
-      {
+      if (linkUrl) {
         linkHtml = `<a href="${linkUrl}" target="_blank" class="btn btn--pink">${linkText} &rarr;</a>`;
       }
 
@@ -199,14 +178,6 @@ function initializeModalSystem() {
         <p>${description}</p>
         ${linkHtml}
       `;
-
-      if (mediaType === "video" && mediaSrc) {
-        const modalVideo = modalBody.querySelector(".modal__media");
-        if (modalVideo) {
-          modalVideo.load();
-          modalVideo.play().catch(err => console.log("Autoplay buffered; awaiting interaction."));
-        }
-      }
 
       modal.classList.add("modal--open");
       document.body.style.overflow = "hidden";
