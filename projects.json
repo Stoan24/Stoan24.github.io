@@ -54,7 +54,7 @@
   {
     "title": "Beep & Bumper",
     "type": "group",
-    "description": "A fast-paced, award-winning multiplayer party game developed during the 2026 Xbox GameCamp Belgium, taking 1st place in the 'Friendslop' category. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooter—handling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity.",
+    "description": "A fast-paced, award-winning multiplayer party game developed during the 2026 Xbox GameCamp Belgium, taking 1st place in the 'Friendslop' category. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooterhandling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity.",
     "mediaType": "video",
     "mediaSrc": "./images/BeepAndBumperTrailer.mp4",
     "logos": [
@@ -77,6 +77,34 @@
     ],
     "links": [
       {"url": "https://jelena-r.itch.io/justrollwithit", "text": "Visit Itch.io Page", "isIcon": false}
+    ]
+  },
+  {
+    "title": "Minigin Engine",
+    "type": "solo",
+    "description": "A component-based game engine written in C++, featuring a recreation of the classic arcade game Pengo. To manage the game's mechanics: destructible ice grids, sliding blocks, and autonomous enemy logic. I used the Component pattern to decouple entity data from engine systems. I implemented the State pattern to switch between different level states, alongside a custom Observer pattern and EventQueue system that handled score and health tracking.",
+    "mediaType": "video",
+    "mediaSrc": "./images/Pengo.mp4",
+    "logos": [
+      {"src": "./images/CPlusPlus.png", "alt": "C#", "title": "Programmed in C++"}
+    ],
+    "links": [
+      {"url": "https://github.com/OlivierStan/Prog4-Engine", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true},
+      {"url": "https://github.com/avadae/minigin", "text": "Visit Minigin", "isIcon": false}
+    ]
+  },
+  {
+    "title": "Utility Theory Research",
+    "type": "solo",
+    "description": "A dedicated Game AI research focused on the practical applications of Utility Theory in real-time simulations. Moving away from standard, rigid Finite State Machines, I designed a prototype to study how math-driven scoring can generate organic, life-like agent autonomy. I built a dynamic utility-scoring loop where multi-layered environmental factors and shifting internal needs interact to drive agent behaviors.",
+    "mediaType": "video",
+    "mediaSrc": "./images/UTAI.mp4",
+    "logos": [
+      {"src": "./images/CSharp.png", "alt": "C#", "title": "Programmed in C#"},
+      {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
+    ],
+    "links": [
+      {"url": "https://github.com/OlivierStan", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true}
     ]
   }
 ]

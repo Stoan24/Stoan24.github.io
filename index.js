@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const linksHtml = project.links.map(link => {
           if (link.isIcon) {
-            return `<a href="${link.url}" target="_blank"><img src="${link.src}" class="work__code" title="${link.title}" alt="${link.alt}"></a>`;
+            return `<a href="${link.url}" target="_blank" class="work__code-link"><img src="${link.src}" class="work__code" title="${link.title}" alt="${link.alt}"></a>`;
           } else {
             return `<a href="${link.url}" target="_blank" class="link__text">${link.text} <span>&rarr;</span></a>`;
           }
@@ -102,8 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const projectBox = document.createElement("div");
         projectBox.className = "work__box";
-        projectBox.style.cursor = "pointer";
-        
+        projectBox.tabIndex = 0;
+        projectBox.setAttribute("role", "button");
+
         projectBox.setAttribute("data-title", project.title);
         projectBox.setAttribute("data-description", project.description);
         projectBox.setAttribute("data-media-type", project.mediaType);
@@ -150,7 +151,16 @@ function initializeModalSystem() {
   if (!modal || !modalBody || !modalClose) return;
 
   projectBoxes.forEach((box) => {
-    box.addEventListener("click", () => {
+    box.addEventListener("click", () => openProjectModal(box));
+    box.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openProjectModal(box);
+      }
+    });
+  });
+
+  function openProjectModal(box) {
       const title = box.getAttribute("data-title");
       const description = box.getAttribute("data-description");
       const mediaType = box.getAttribute("data-media-type");
@@ -181,8 +191,7 @@ function initializeModalSystem() {
 
       modal.classList.add("modal--open");
       document.body.style.overflow = "hidden";
-    });
-  });
+  }
 
   const closeModal = () => {
     modal.classList.remove("modal--open");

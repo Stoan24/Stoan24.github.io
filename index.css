@@ -510,134 +510,66 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
-.work__box {
-    display: flex;
-    align-items: center;
-}
-
-@media(max-width: 900px) {
-    .work__box {
-        align-items: initial;
-        flex-direction: column-reverse;
-    }
-}
-
-.work__box:not(:last-child) {
-    margin-bottom: 25rem;
-}
-
-@media(max-width: 500px) {
-    .work__box:not(:last-child) {
-        margin-bottom: 20rem;
-    }
-}
-
-.work__links {
-    display: flex;
-    align-items: center;
-}
-
-.work__text {
-    flex: 0 0 30%;
-}
-
-.work__list {
-    /* list-style-type: square; */
-    list-style-position: inside;
-    margin-bottom: var(--gutter-normal);
-}
-
-.work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
-}
-
-.work__code:hover {
-    transform: scale(1.2);
-}
-
-.work__image-box {
-    margin-bottom: var(--gutter-normal);
-}
-
-@media(min-width: 901px) {
-    .work__image-box {
-        flex: 1;
-        margin: 0 0 0 10rem;
-    }
-}
-
-@media(max-width: 900px) {
-    .work__code {
-        height: 4rem;
-    }
-}
-
-
 .work__boxes {
     display: grid;
-    /* Create 3 equal columns, with a minimum width to prevent overcrowding */
+    
     grid-template-columns: repeat(3, minmax(280px, 1fr));
-    /* The space between the project cards */
+    
     gap: 4rem;
     margin-top: var(--gutter-normal);
 }
 
 /* --- Project Card Styling --- */
 .work__box {
-    background-color: #1a1a1a; /* Very dark gray, slightly lighter than black */
-    border-radius: 15px; /* Rounded corners for the card */
-    overflow: hidden; /* Important to keep the top video/image within rounded corners */
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
     display: flex;
-    flex-direction: column; /* Content flows top-to-bottom */
-    
-    /* RESET previous work__box styles */
-    align-items: flex-start !important;
-    margin-bottom: 0 !important;
-    border-bottom: none !important;
-    padding-bottom: 2rem; /* Give some space at the bottom of the card */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 2rem;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-/* Subtle lift effect on hover */
-.work__box:hover {
+.work__box:hover,
+.work__box:focus-visible {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(255, 191, 0, 0.25);
+    border-color: var(--yellow);
 }
 
 /* --- Media (Video/Image) Container --- */
 .work__image-box {
     width: 100%;
-    /* Keep previous min-width setup, but now fill the container */
+
     margin: 0 !important;
-    height: 200px; /* Force a consistent height for all images/videos */
-    overflow: hidden; /* Crop images that are too tall */
+    height: 200px;
+    overflow: hidden;
 }
 
-/* Apply image/video styles specifically within the grid box */
 .work__box video,
 .work__box img.work__image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Cover the 200px area without distortion (crops edges) */
-    display: block; /* Eliminate small gaps below media */
+    object-fit: cover;
+    display: block;
 }
 
 /* --- Text Container Setup --- */
 .work__text {
-    flex: 1 1 auto; /* Allow text block to grow/shrink, but always fill the space */
-    padding: 2rem 2.5rem 0; /* Add padding inside the card for the text */
+    flex: 1 1 auto;
+    padding: 2rem 2.5rem 0;
     
-    /* RESET previous flex-shrink */
     flex: 0 0 auto !important; 
 }
 
-/* Text Element Spacing */
 .work__text h3 {
     margin-top: 0;
-    font-size: 2.2rem; /* Slightly smaller heading for the smaller cards */
+    font-size: 2.2rem;
 }
 
 .work__text p {
@@ -646,9 +578,8 @@ body:not(.user-is-tabbing) a:focus {
     margin: 1rem 0 2rem;
     color: var(--white-1);
     
-    /* A quick way to ensure descriptions don't get too long and misalign the buttons */
     display: -webkit-box;
-    -webkit-line-clamp: 3; /* Limit description to 3 lines */
+    line-clamp: 3;
     -webkit-box-orient: vertical;  
     overflow: hidden;
 }
@@ -658,21 +589,20 @@ body:not(.user-is-tabbing) a:focus {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-top: auto; /* Pushes links to the bottom of the card if text is short */
-    gap: 1.5rem; /* Space between the Itch link and GitHub icon */
-    border-top: 1px solid rgba(255,255,255,0.1); /* Subtle divider */
+    margin-top: auto;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 1.5rem;
 }
 
-/* Specific styling for the link__text within cards */
 .work__text .link__text {
     font-size: 1.4rem;
     padding: 0.5rem;
-    border-bottom: 1px solid transparent; /* Remove previous underline style */
+    border-bottom: 1px solid transparent;
 }
 
 .work__text .link__text::after {
-    display: none; /* Disable the old hover fill effect in cards */
+    display: none;
 }
 
 .work__text .link__text:hover {
@@ -681,36 +611,46 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* GitHub Icon Specifics in cards */
+.work__code-link {
+    display: inline-block;
+    border-bottom: 1px solid transparent;
+    line-height: 1;
+    transition: border-color 0.2s ease;
+}
+
+.work__code-link:hover,
+.work__code-link:focus-visible {
+    border-color: var(--yellow);
+}
+
 .work__code {
-    margin-left: 0 !important; /* RESET previous margin */
-    height: 2.5rem !important; /* Scale it down */
+    margin-left: 0;
+    height: 2.5rem;
+    display: block;
 }
 
 /* --------------------------------------- */
 /* ---- Special Section: Software Logos --- */
 /* --------------------------------------- */
 
-/* The new container you will add in HTML */
 .work__software-logos {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 1.5rem; /* Space between software icons */
+    gap: 1.5rem;
     margin-top: 2rem;
     padding: 1rem 0;
 }
 
-/* Scaling and styling the software logos */
 .work__software-logo {
-    height: 3rem; /* Set a consistent height */
-    max-width: 6rem; /* Prevent wide logos from taking too much space */
-    object-fit: contain; /* Ensure logos scale correctly */
-    filter: grayscale(100%) opacity(0.7); /* Subtle design: gray and faded */
+    height: 3rem;
+    max-width: 6rem;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
     transition: filter 0.3s ease;
 }
 
-/* Light up the logo on hover */
 .work__software-logo:hover {
     filter: grayscale(0%) opacity(1);
 }
@@ -721,19 +661,17 @@ body:not(.user-is-tabbing) a:focus {
 
 @media(max-width: 1000px) {
     .work__boxes {
-        /* Drop to 2 columns on medium screens */
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(max-width: 650px) {
     .work__boxes {
-        /* Single column on small mobile screens */
         grid-template-columns: 1fr;
     }
     
     .work__box {
-        max-width: 500px; /* Optional: limit width on mobile for better reading */
+        max-width: 500px;
         margin: 0 auto;
     }
 }
@@ -958,5 +896,3 @@ body:not(.user-is-tabbing) a:focus {
         padding: var(--gutter-medium) 0;
     } 
 }
-
-
