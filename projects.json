@@ -10,7 +10,7 @@
       {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
     ],
     "links": [
-      {"url": "https://github.com/Stoan24/Proxy-Fight-Club", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true}
+      {"url": "https://github.com/Stoan24/Proxy-Fight-Club", "text": "Visit Repo", "isIcon": false}
     ]
   },
   {
@@ -35,7 +35,7 @@
       {"src": "./images/CPlusPlus.png", "alt": "C++", "title": "Programmed in C++"}
     ],
     "links": [
-      {"url": "https://github.com/Stoan24/TowerDefence", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true}
+      {"url": "https://github.com/Stoan24/TowerDefence", "text": "Visit Repo", "isIcon": false}
     ]
   },
   {
@@ -54,7 +54,7 @@
   {
     "title": "Beep & Bumper",
     "type": "group",
-    "description": "A fast-paced, award-winning multiplayer party game developed during the 2026 Xbox GameCamp Belgium, taking 1st place in the 'Friendslop' category. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooterhandling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity.",
+    "description": "A fast-paced, multiplayer party game developed during the 2026 Xbox GameCamp Belgium, taking 1st place in the 'Friendslop' category. Collaborating in a large team of 10 people required efficient task management. As one of four programmers, I took ownership of designing character abilities and building the level layout. Beyond my main tasks, I served as the team's agile troubleshooterhandling rapid bug fixes, optimizing gameplay workflows, and directly supporting the art and audio departments to ensure their assets integrated flawlessly into Unity.",
     "mediaType": "video",
     "mediaSrc": "./images/BeepAndBumperTrailer.mp4",
     "logos": [
@@ -89,7 +89,7 @@
       {"src": "./images/CPlusPlus.png", "alt": "C#", "title": "Programmed in C++"}
     ],
     "links": [
-      {"url": "https://github.com/OlivierStan/Prog4-Engine", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true},
+      {"url": "https://github.com/OlivierStan/Prog4-Engine", "text": "Visit Repo", "isIcon": false},
       {"url": "https://github.com/avadae/minigin", "text": "Visit Minigin", "isIcon": false}
     ]
   },
@@ -104,7 +104,7 @@
       {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
     ],
     "links": [
-      {"url": "https://github.com/OlivierStan", "src": "./images/github.svg", "alt": "GitHub", "title": "View Repository", "isIcon": true}
+      {"url": "https://github.com/OlivierStan", "text": "Visit Repo", "isIcon": false}
     ]
   }
 ]
