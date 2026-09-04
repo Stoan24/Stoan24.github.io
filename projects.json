@@ -104,7 +104,21 @@
       {"src": "./images/Unity.svg", "alt": "Unity", "title": "Made with Unity"}
     ],
     "links": [
-      {"url": "https://github.com/OlivierStan", "text": "Visit Repo", "isIcon": false}
+      {"url": "https://github.com/OlivierStan/UtilityTheory", "text": "Visit Repo", "isIcon": false}
+    ]
+  },
+  {
+    "title": "End Of The Line",
+    "type": "group",
+    "description": "Developed for the Brackeys 2026.2 Game Jam, End of the Line is a tense inspection simulation where players must verify passenger documents to catch imposters boarding a bus route. As a core gameplay programmer, I engineered the primary document-checking mechanics, building the randomized logic systems responsible for generating passports, tickets, and their subtle visual or data discrepancies. When my team was forced to step away during the crucial final weekend of the jam, I took ownership of the entire project to ensure it successfully crossed the finish line. Acting as a rapid troubleshooter, I dove directly into my colleagues' unfamiliar code to squash critical bugs, finish incomplete features, and polish the final game loop. This high-pressure pivot required adaptability and proved my comfort with rapidly reading, debugging, and extending other developers' code under a strict deadline.",
+    "mediaType": "video",
+    "mediaSrc": "./images/EOTL.mp4",
+    "logos": [
+      {"src": "./images/CPlusPlus.png", "alt": "C++", "title": "Programmed in C++"},
+      {"src": "./images/Unreal.svg", "alt": "Unreal", "title": "Made with Unreal"}
+    ],
+    "links": [
+      {"url": "https://github.com/YoranSchoonooghe/EchoPrototype", "text": "Visit Repo", "isIcon": false}
     ]
   }
 ]
